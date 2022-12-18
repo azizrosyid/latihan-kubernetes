@@ -46,10 +46,10 @@ spec:
         volumeMounts:
         - mountPath: /etc/redis
           name: config
-    volumes:
-      - name: config
-        configMap:
-          name: redis-config
-          items:
-          - key: config
-            path: redis.conf
+      volumes:
+        - name: config
+          configMap:
+            name: redis-config
+            items:
+            - key: config
+              path: redis.conf
