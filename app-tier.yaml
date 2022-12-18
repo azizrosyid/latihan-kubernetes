@@ -43,3 +43,8 @@ spec:
         env:
           - name: REDIS_URL
             value: redis://$(DATA_TIER_SERVICE_HOST):$(DATA_TIER_SERVICE_PORT_REDIS)
+          - name: PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: app-tier-secret
+                key: password
